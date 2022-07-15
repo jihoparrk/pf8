@@ -1,0 +1,86 @@
+#title {
+}
+
+#title .wrap {
+}
+#title .wrap .tMenu{
+
+}
+#title .wrap .tMenu ul{
+}
+#title .wrap .tMenu ul li{
+  
+}
+#title .wrap .tMenu ul li a{
+
+}
+#title ul.slide {
+}
+
+#title ul.slide li {
+}
+#title ul.slide li::before{
+
+}
+
+#title ul.slide li:not(.currentSlide) p{
+}
+#title ul.slide li h2 {
+}
+
+#title ul.slide li p {
+}
+
+#title span.control {
+}
+#title .slick-dots {
+  bottom: 10px;
+  text-align: right;
+}
+#title .slick-dots li{
+  margin: 15px;
+}
+#title .slick-dots li button::before {
+  font-size: 25px;
+  opacity: .5;
+  color: #fff;
+}
+#title .slick-dots li.slick-active button::before {
+  color: purple;
+}
+#title .wrap .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+#title .wrap .info .schedule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 3px solid;
+}
+#title .wrap .info h2{
+  width: 20%;
+  line-height: 3;
+}
+#title .wrap .info p {
+
+}
+#title .wrap .info a {
+font-size: 25px;
+line-height: 3;
+padding: 0 24px;
+color: purple;
+ height: 78px;
+transition: all 0.5s ease-out;
+  display:block;
+  border-bottom: 3px solid;
+}
+#title .wrap .info a:hover{
+  background-color: purple;
+  color: #fff;
+  height: 120px;
+}
+#title .wrap .info strong {
+  padding-right: 10px;
+}

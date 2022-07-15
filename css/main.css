@@ -1,0 +1,47 @@
+@media hover{
+  #exhibits .wrap ul li a:hover{
+    background-color: #000;
+  }
+}
+main{
+}
+/* exhibits */
+#exhibits {
+
+}
+#exhibits .wrap {
+
+}
+#exhibits .wrap h2 {
+  line-height: 3;
+}
+#exhibits .wrap ul {
+}
+#exhibits .wrap ul li {
+  padding-right: 30px;
+  box-sizing: border-box;
+  transform: translateX(15px);
+}
+#exhibits .wrap ul li a {
+
+}
+#exhibits .wrap ul li a img {
+}
+#exhibits .wrap ul li a span {
+  border: 1px solid;
+  display: inline-block;
+  padding: 5px;
+  margin: 20px 15px 20px 0;
+}#exhibits .wrap ul li a span:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+}
+#exhibits .wrap ul li a h4 {
+  font-weight: 500;
+}
+#exhibits .wrap ul li a p {
+  line-height: 3;
+}
+#exhibits .slick-dots li button{
+  
+}
