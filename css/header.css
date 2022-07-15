@@ -1,3 +1,9 @@
+@media (hover:hover){
+  #header .gnb > li > a:hover{
+    color: purple;
+  }
+}
+
 #header{
 }
 #header .wrap{
@@ -46,9 +52,11 @@
   right: 15px;
   top: 8px;
 }
-.rotate{
-  transform: rotate(135deg);
+#header .inner_gnb> li:nth-child(4).rotate::before,
+#header .inner_gnb> li:nth-child(5).rotate::before{
+  transform: rotate(225deg);
   color: #fff;
+  top: 12px;
 }
 #header .inner_gnb> li:nth-of-type(6) a{
   font-size: 0;
@@ -156,6 +164,7 @@ header h1 a{
 #header .gnb > li > a{
   padding:0 20px;
   box-sizing: border-box;
+  transition: all 0.7s;
 }
 #header .gnb li>ul{
   display: none;
