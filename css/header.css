@@ -1,5 +1,8 @@
 #header{
 }
+#header .wrap{
+  padding: 30px 0 0 0;
+}
 #header .inner_header{
   display: flex;
   justify-content: end;
@@ -43,7 +46,7 @@
   right: 15px;
   top: 8px;
 }
-.inner_gnb .rotate> li:nth-child(4)::before{
+.rotate{
   transform: rotate(135deg);
   color: #fff;
 }
@@ -119,12 +122,15 @@ header .sns li:nth-child(6) a{
   padding: 15px 0;
   background-color: #000;
   text-align: center;
+  z-index: 1;
 }
 header .main_header{
-  padding: 20px 0;
+  padding: 20px 0 85px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  box-sizing: border-box;
 }
 header h1{
 
@@ -136,18 +142,47 @@ header h1 a{
   display: block;
   font-size: 0;
 }
-header ul.gnb{
+#header .gnb{
   display: flex;
   justify-content: space-around;
 }
-header ul.gnb li{
-
+/* #header .gnb li:hover ul{
+  display: flex;
+} */
+#header .gnb > li{
   font-size: 20px;
   font-weight: 500;
 }
-header ul.gnb li a{
+#header .gnb > li > a{
   padding:0 20px;
   box-sizing: border-box;
+}
+#header .gnb li>ul{
+  display: none;
+  position: absolute;
+  background-color: #000;
+  top: 100px;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+}
+#header .gnb li>ul li{
+}
+#header .gnb li>ul li a{
+  color: #fff;
+  font-size: 14px;
+  line-height: 4;
+  padding: 16px;
+}
+#header .exhibits{
+}
+#header .exhibits li{
+}
+#header .exhibits li a{
+  font-size: 15px;
+}
+#header .information li a{
+  color: #fff;
 }
 header ul.enb{
   display: flex;
