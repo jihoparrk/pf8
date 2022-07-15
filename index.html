@@ -65,10 +65,10 @@
     $(document).ready(
         function(){
         //소속박물관 바로가기, language 버튼 클릭 시 해당 ul 나타남
-        $(".inner_header ul li a").click(function(){
-            $(this).next().slideToggle("show");
-            $(this).toggleClass("colorChange");
-            $(".inner_gnb > li:nth-child(4)::before").addClass("rotate");
+        $(".inner_header ul li").click(function(){
+            $(this).children("ul").slideToggle("show");
+            $(this).children("a").toggleClass("colorChange");
+            $(this).toggleClass("rotate");
             return false;
         });
         // gnb li hover시 해당 ul 나타남
