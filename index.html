@@ -61,6 +61,20 @@
         });
     });
 </script>
+<!-- notice slide -->
+<script>
+    $(function(){
+        $('.slide').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 2000      
+        });
+    });
+</script>
 <script>
     $(document).ready(
         function(){
@@ -79,6 +93,17 @@
         // main_header 영역 벗어나면 ul 사라짐
         $("#header .main_header").on("mouseleave",function(){
             $("#header .gnb li").children("ul").delay(1000).fadeOut({"display":"none"});
+        });
+        
+        //notice board 클릭 시 해당 게시글 목록 나타남
+        $("#notice .wrap .board ul li:nth-child(1)").children("ul").css("display","flex");
+        $("#notice .wrap .board> ul> li:nth-child(1)").css("border-bottom","2px solid");
+        $("#notice .wrap .board ul li").click(function(){
+            $(this).children("ul").css("display","flex");
+            $(this).siblings().children("ul").css("display","none");
+            $(this).css("border-bottom","2px solid");
+            $("#notice .wrap .board ul li").not(this).css("border-bottom","none");
+            return false;
         });
 
     });
@@ -289,6 +314,149 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <!-- notice -->
+        <section id="notice">
+            <div class="wrap">
+                <h2 class="h2">알립니다</h2>
+                <div class="board">
+                    <ul>
+                        <li>
+                            <a href="">알림</a>
+                            <ul>
+                                <li>
+                                    <a href="">『미술자료』 제102호 원고 모집 안내</a>
+                                    <p class="p">2022.07.20</p>
+                                </li>
+                                <li>
+                                    <a href="">불교회화실, 불교조각실 임시 휴실 안내(7.25.~27.)</a>
+                                    <p class="p">2022.07.20</p>
+                                </li>
+                                <li>
+                                    <a href="">7/25(월) 조각공예관 금속공예실(302호) 임시 휴실 안내</a>
+                                    <p class="p">2022.07.19</p>
+                                </li>
+                                <li>
+                                    <a href="">2022년 하반기 박물관ㆍ미술관 학예사 자격증 및 경력인정대상기관 심사계획</a>
+                                    <p class="p">2022.07.18</p>
+                                </li>
+                                <li>
+                                    <a href="">분실물 정보안내</a>
+                                    <p class="p">2022.07.18</p>
+                                </li>
+                                <li>
+                                    <a href="">분실물 정보안내</a>
+                                    <p class="p">2022.07.11</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">고시/공고</a>
+                            <ul>
+                                <li>
+                                    <a href="">2022년 하반기 박물관ㆍ미술관 학예사 자격증 및 경력인정대상기관 심사계획</a>
+                                    <p class="p">2022.07.19</p>
+                                </li>
+                                <li>
+                                    <a href="">국립공주박물관 공무직 근로자 채용 공고</a>
+                                    <p class="p">2022.07.13</p>
+                                </li>
+                                <li>
+                                    <a href="">국립박물관 전시안내 앱 보안강화 및 클라우드 전환 사업 입찰 공고</a>
+                                    <p class="p">2022.07.01</p>
+                                </li>
+                                <li>
+                                    <a href="">국립청주박물관 공무직근로자 (교육보조) 채용 최종 합격자 공고</a>
+                                    <p class="p">2022.05.02</p>
+                                </li>
+                                <li>
+                                    <a href="">2022년 상반기 학예사 자격증 및 경력인정대상기관 심의결과</a>
+                                    <p class="p">2022.04.22</p>
+                                </li>
+                                <li>
+                                    <a href="">2022년 공무직(시설관리 전기) 근로자 채용 서류전형 합격자 발표 및 면접시험</a>
+                                    <p class="p">2022.04.14</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">채용안내</a>
+                            <ul>
+                                <li>
+                                    <a href="">국립중앙박물관 고객지원팀 공무직근로자(한국어 영어 전시해설) 채용 서류전</a>
+                                    <p class="p">2022.07.19</p>
+                                </li>
+                                <li>
+                                    <a href="">2022년 국립중앙박물관 학예연구직 공무원 경력경쟁채용시험 서류전형 합격</a>
+                                    <p class="p">2022.07.18</p>
+                                </li>
+                                <li>
+                                    <a href="">2022년도 국립중앙박물관 시설관리과 공무직 [기계(교대), 소방(선임), 미화</a>
+                                    <p class="p">2022.07.15</p>
+                                </li>
+                                <li>
+                                    <a href="">국립중앙박물관 디자인팀 기간제근로자(출판·홍보) 서류전형 합격자 및 면접시</a>
+                                    <p class="p">2022.07.15</p>
+                                </li>
+                                <li>
+                                    <a href="">행정지원과 공무직[조리] 근로자 채용 공고</a>
+                                    <p class="p">2022.07.14</p>
+                                </li>
+                                <li>
+                                    <a href="">국립대구박물관 기획운영과 공무직(전기) 근로자 채용 공고문</a>
+                                    <p class="p">2022.07.13</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">보도자료</a>
+                            <ul>
+                                <li>
+                                    <a href="">[국립중앙박물관] 국립중앙박물관, 메타버스의 가능성과 과제 모색 박물관과</a>
+                                    <p class="p">2022.07.20</p>
+                                </li>
+                                <li>
+                                    <a href="">[국립김해박물관] 가야학술제전 “가야 선주민의 도구 -석기-”</a>
+                                    <p class="p">2022.07.20</p>
+                                </li>
+                                <li>
+                                    <a href="">[국립부여박물관] ´백제금동대향로´와의 특별한 만남에 초대합니다.</a>
+                                    <p class="p">2022.07.19</p>
+                                </li>
+                                <li>
+                                    <a href="">[국립경주박물관] 제38회 우리 문화재 그리기 대회 수상작품전 보도자료</a>
+                                    <p class="p">2022.07.19</p>
+                                </li>
+                                <li>
+                                    <a href="">[국립부여박물관] 동심으로 표현한 백제의 문화유산_제37회 어린이 문화재 그리</a>
+                                    <p class="p">2022.07.18</p>
+                                </li>
+                                <li>
+                                    <a href="">[국립중앙박물관] 국립중앙박물관 - 영원한 삶의 집, 아스타나 고분 개최</a>
+                                    <p class="p">2022.07.15</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <a href="">more</a>
+                    </ul>
+                </div>
+                <div class="slide">
+                    <ul class="slide">
+                        <li>
+                            <a href="">
+                                아하! 발견과 공감
+                                <img src="img/app.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                스마트폰 전시안내 앱 서비스
+                                <img src="img/exghibit.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
