@@ -75,6 +75,20 @@
         });
     });
 </script>
+<!-- event slide -->
+<script>
+    $(function(){
+        $('.event_slide').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            autoplay: false,
+            autoplaySpeed: 2000      
+        });
+    });
+</script>
 <script>
     $(document).ready(
         function(){
@@ -95,9 +109,9 @@
             $("#header .gnb li").children("ul").delay(1000).fadeOut({"display":"none"});
         });
         
-        //notice board 클릭 시 해당 게시글 목록 나타남
+        //notice board 메뉴 클릭 시 해당 게시글 목록 나타남
         $("#notice .wrap .board ul li:nth-child(1)").children("ul").css("display","flex");
-        $("#notice .wrap .board> ul> li:nth-child(1)").css("border-bottom","2px solid");
+        $("#notice .wrap .board> ul> li:nth-child(1)").css({"border-bottom":"2px solid","font-weight":"600"},);
         $("#notice .wrap .board ul li").click(function(){
             $(this).children("ul").css("display","flex");
             $(this).siblings().children("ul").css("display","none");
@@ -105,6 +119,14 @@
             $("#notice .wrap .board ul li").not(this).css("border-bottom","none");
             return false;
         });
+
+        //event 페이지 순서 넘버링
+        $("#notice .event h3").append("<div class='conunt'><span class='left_number'></span><span>/</span><span class='right_number'></span></div>");
+        var number = $(".slick-dots .slick-active").index()+1;
+        $(".left_number").text(number);
+        $(".right_number").text(+$(".event_slide .slick-dots li").length);
+
+        
 
     });
 </script>
@@ -456,6 +478,46 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="edu">
+                    <h3 class="h5">교육</h3>
+                    <a href="">모두를 위한 박물관 교육</a>
+                    <p class="h5">새로운 교육플랫폼 모두(MODU)을 만나보세요!</p>
+                </div>
+                <div class="event">
+                    <h3 class="h5">행사</h3>
+                    <ul class="event_slide">
+                        <li>
+                            <img src="img/event_01.jpg" alt="">
+                            <h4 class="h6">가족뮤지컬 '수박수영장'</h4>
+                            <p class="p">2022-07-16 - 2022-08-28</p>
+                        </li>
+                        <li>
+                            <img src="img/event_02.jpg" alt="">
+                            <h4 class="h6">사유의 방 연계 공연 : 사유하는 극장 - 사유의 길</h4>
+                            <p class="p">2022-09-03 - 2022-09-04</p>
+                        </li>
+                        <li>
+                            <img src="img/event_03.jpg" alt="">
+                            <h4 class="h6">박물관문화향연 정오의 음악회 월드뮤직 '반디'</h4>
+                            <p class="p">2022-07-30 - 2022-07-30</p>
+                        </li>
+                        <li>
+                            <img src="img/event_04.jpg" alt="">
+                            <h4 class="h6">박물관문화향연 정오의 음악회 금관오중주 '브라스 마켓'</h4>
+                            <p class="p">2022-08-13 - 2022-08-13</p>
+                        </li>
+                        <li>
+                            <img src="img/event_05.jpg" alt="">
+                            <h4 class="h6">박물관문화향연 정오의 음악회 퓨전국악그룹 '시아'</h4>
+                            <p class="p">2022-08-20 - 2022-08-20</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="online_museum">
+                    <h3 class="h5">온라인 전시관</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qvEl7QT4WjM" frameborder="0"></iframe>
+                    <h4 class="h5">어느 수집가의 초대 - 고故 이건희 회장 기증 1주년 기념전</h4>
                 </div>
             </div>
         </section>
