@@ -55,6 +55,7 @@ main{
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+  border-bottom: 1px solid #ccc;
 }
 #notice .wrap h2 {
 
@@ -132,4 +133,91 @@ main{
 }
 #notice .wrap .slide ul li a {
   font-size: 0;
+}
+#notice .wrap h3{
+  line-height: 5;
+}
+#notice .wrap .edu {
+  width: 25%;
+}
+#notice .wrap .edu h3 {
+
+  line-height: 5;
+}
+#notice .wrap .edu a {
+  background-image: url(../img/edu.jpg);
+  width: 300px;
+  height: 200px;
+  display: block;
+  font-size: 0;
+  background-size: cover;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+#notice .wrap .edu p {
+  line-height: 2;
+}
+#notice .event {
+
+  width: 260px;
+}
+#notice .event h3 {
+  position: relative;
+}
+#notice .event ul {
+
+}
+#notice .event ul li {
+
+}
+#notice .event ul li img {
+  width: 260px;
+}
+#notice .event ul li h4 {
+  line-height: 2;
+  margin: 50px 0;
+}
+#notice .event ul li p {
+
+}
+#notice .event button.slick-arrow{
+  width: 30px;
+  height: 30px;
+}
+#notice .event button.slick-arrow.slick-prev{
+    left: 150px;
+   top: -50px;
+    border-radius: 0 10px 10px 0;
+}
+#notice .event button.slick-arrow.slick-next{
+  top: -50px;  
+  right: 0;
+    border-radius: 10px 0 0 10px;
+}
+#notice .event button.slick-arrow::before{
+    font-family: initial !important;
+    content: "" !important;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 2px solid #000;
+    border-bottom:transparent;
+    border-left:transparent;    
+} 
+#notice .event .slick-prev::before{
+    transform:translateX(10px) rotate(-135deg);
+}
+#notice .event .slick-next::before{
+    transform: rotate(45deg);
+}
+#notice .event .conunt{
+  font-size: 17px;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  font-weight: 500;
+}
+#notice .event .slick-dots li button{
+  display: none;
 }
