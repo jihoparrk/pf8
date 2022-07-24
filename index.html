@@ -111,12 +111,12 @@
         
         //notice board 메뉴 클릭 시 해당 게시글 목록 나타남
         $("#notice .wrap .board ul li:nth-child(1)").children("ul").css("display","flex");
-        $("#notice .wrap .board> ul> li:nth-child(1)").css({"border-bottom":"2px solid","font-weight":"600"},);
+        $("#notice .wrap .board> ul> li:nth-child(1)").css({"border-bottom":"2px solid","font-weight":"600"});
         $("#notice .wrap .board ul li").click(function(){
             $(this).children("ul").css("display","flex");
             $(this).siblings().children("ul").css("display","none");
-            $(this).css("border-bottom","2px solid");
-            $("#notice .wrap .board ul li").not(this).css("border-bottom","none");
+            $(this).css({"border-bottom":"2px solid","font-weight":"600"});
+            $("#notice .wrap .board ul li").not(this).css({"border-bottom":"none","font-weight":"initial"});
             return false;
         });
 
