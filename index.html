@@ -33,17 +33,15 @@
 <!-- title slide -->
 <script>
     $(function(){
-        $(document).ready(function(){
-            $('.titleslide').slick({
-                dots: true,
-                arrows: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                adaptiveHeight: true        
-            });
+        $('.titleslide').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            adaptiveHeight: true        
         });
     });
 </script>
@@ -92,14 +90,14 @@
 <script>
     $(document).ready(
         function(){
-        //소속박물관 바로가기, language 버튼 클릭 시 해당 ul 나타남
+        //소속박물관 바로가기, language 버튼 클릭 시 해당 하위 ul 나타남
         $(".inner_header ul li").click(function(){
             $(this).children("ul").slideToggle("show");
             $(this).children("a").toggleClass("colorChange");
             $(this).toggleClass("rotate");
             return false;
         });
-        // gnb li hover시 해당 ul 나타남
+        // gnb li hover시 해당 하위 ul 나타남
         $("#header .gnb li").hover(function(){
             $(this).children("ul").css("display","flex");
             $("#header .gnb li").not(this).children("ul").css("display","none");
@@ -117,6 +115,13 @@
             $(this).siblings().children("ul").css("display","none");
             $(this).css({"border-bottom":"2px solid","font-weight":"600"});
             $("#notice .wrap .board ul li").not(this).css({"border-bottom":"none","font-weight":"initial"});
+            return false;
+        });
+        //footer2 li 클릭 시 해당 하위 ul 나타남
+        $(".footer_2 li").click(function(){
+            $(this).children("ul").slideToggle();
+            $(this).children("a").toggleClass("colorChange");
+            $(this).toggleClass("rotate");
             return false;
         });
     });
@@ -607,6 +612,64 @@
                         </ul>
                     </li>
                 </ul>
+                <ul class="footer_1">
+                    <li><a href="">문화유산표준관리시스템</a></li>
+                    <li><a href="">청년멘토</a></li>
+                    <li><a href="">VCM 가상명품박물관 </a></li>
+                </ul>
+                <ul class="footer_2">
+                    <li>
+                        <a href="">관련사이트 바로가기</a>
+                        <ul>
+                            <li><a href="">국립박물관 문화재단</a></li>
+                            <li><a href="">국립중앙박물관회</a></li>
+                            <li><a href="">사단법인 한국박물관협회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">소속박물관 바로가기</a>
+                        <ul class="">
+                            <li><a href="">국립경주박물관</a></li>
+                            <li><a href="">국립광주박물관</a></li>
+                            <li><a href="">국립전주박물관</a></li>
+                            <li><a href="">국립대구박물관</a></li>
+                            <li><a href="">국립부여박물관</a></li>
+                            <li><a href="">국립공주박물관</a></li>
+                            <li><a href="">국립진주박물관</a></li>
+                            <li><a href="">국립청주박물관</a></li>
+                            <li><a href="">국립김해박물관</a></li>
+                            <li><a href="">국립제주박물관</a></li>
+                            <li><a href="">국립춘천박물관</a></li>
+                            <li><a href="">국립나주박물관</a></li>
+                            <li><a href="">국립익산박물관</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">가이드북 다운로드</a>
+                        <ul class="">
+                            <li><a href="">한국어(PDF)</a></li>
+                            <li><a href="">English(PDF)</a></li>
+                            <li><a href="">日本語(PDF)</a></li>
+                            <li><a href="">中文(PDF)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer_3">
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">전자민원</a></li>
+                    <li><a href="">공공데이터개방</a></li>
+                    <li><a href="">저작권정책</a></li>
+                    <li><a href="">클린신고센터</a></li>
+                    <li><a href="">찾아오시는길</a></li>
+                </ul>
+                <div class="footer_4">
+                    <address>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
+                            대표전화 02-2077-9000
+                    </address>
+                    <p>© National Museum of Korea.</p>
+                    <a href="">웹접근성 품질 인증마크</a>
+                    <a href="">공공누리</a>
+                </div>
             </div>
         </footer>
     </main>
