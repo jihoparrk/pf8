@@ -55,14 +55,41 @@
             speed: 500,
             slidesToShow: 4,
             autoplay: true,
-            autoplaySpeed: 2000      
+            autoplaySpeed: 2000,
+            responsive: [
+                    {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        arrows: false
+                    }
+                    },
+                    {
+                    breakpoint: 481,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                    }
+                ]     
         });
     });
 </script>
 <!-- notice slide -->
 <script>
     $(function(){
-        $('.slide').slick({
+        $('.notice_slide').slick({
             dots: false,
             arrows: false,
             infinite: true,
@@ -139,6 +166,14 @@
             }
         });
         $(".length_number").text(+$(".event_slide .slick-dots li").length);
+    });
+</script>
+<!-- 반응형모드에서 햄버거버튼 추가 -->
+<script>
+    $(function(){
+        if($(window).width()<769){
+            $("<a class='more'></a>").appendTo("#header .main_header");
+        }
     });
 </script>
 <body>
@@ -305,7 +340,9 @@
                 <a href="">오시는길</a>
                 <a href="">예약하기</a>
             </div>
-        <main>
+        </div>
+    </div>
+    <main>
         <!-- exhibits -->
         <section id="exhibits">
             <div class="wrap">
@@ -321,7 +358,7 @@
                     <li>
                         <a href="">
                             <img src="img/exhibits02.jpg" alt=""><span>현재전시</span><span>특별전</span>
-                            <h4 class="h5">어느 수집가의 초대 - 고故 이건희 회장 기증 1주년 기념전</h4>
+                            <h4 class="h5">어느 수집가의 초대</h4>
                             <p class="p">2022-04-28~ 2022-08-28</p>
                         </a>
                     </li>
@@ -475,7 +512,7 @@
                     </ul>
                 </div>
                 <div class="slide">
-                    <ul class="slide">
+                    <ul class="notice_slide">
                         <li>
                             <a href="">
                                 아하! 발견과 공감
@@ -532,146 +569,147 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="wrap">
-                <ul class="fnb">
-                    <li>
-                        <a href="">관람정보</a>
-                        <ul class="">
-                            <li><a href="">관람 안내</a></li>
-                            <li><a href="">전시 해설</a></li>
-                            <li><a href="">예약하기</a></li>
-                            <li><a href="">관람·편의시설</a></li>
-                            <li><a href="">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">전시</a>
-                        <ul class="">
-                            <li><a href="#">상설 전시</a></li>
-                            <li><a href="#">특별 전시</a></li>
-                            <li><a href="#">디지털 실감 영상관</a></li>
-                            <li><a href="#">온라인 전시관</a></li>
-                            <li><a href="#">우리문화재 국외 전시</a></li>
-                            <li><a href="#">소속 국립박물관 전시</a></li>
-                            <li><a href="#">전시도록</a></li>
-                            <li><a href="#">외국박물관 소장 한국문화재</a></li>
-                            <li><a href="#">문화 행사</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">교육</a></li>
-                    <li>
-                        <a href="">소장품</a>
-                        <ul class="">
-                            <li><a href="">큐레이터 추천 소장품</a></li>
-                            <li><a href="">소장품 검색</a></li>
-                            <li><a href="">국보·보물 검색</a></li>
-                            <li><a href="">수어 동영상</a></li>
-                            <li><a href="">소장품 열람·복제</a></li>
-                            <li><a href="">소장품 대여 안내</a></li>
-                            <li><a href="">문화재 기증 안내</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">학술·출판</a>
-                        <ul>
-                            <li><a href="">정기간행물</a></li>
-                            <li><a href="">고고학</a></li>
-                            <li><a href="">역사학</a></li>
-                            <li><a href="">미술사학</a></li>
-                            <li><a href="">아시아학</a></li>
-                            <li><a href="">보존과학</a></li>
-                            <li><a href="">일제 강점기 조사 자료</a></li>
-                            <li><a href="">도서관</a></li>
-                            <li><a href="">기타</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">소식·참여</a>
-                        <ul>
-                            <li><a href="">소식</a></li>
-                            <li><a href="">영상</a></li>
-                            <li><a href="">자원봉사 안내</a></li>
-                            <li><a href="">학예사 자격증 안내</a></li>
-                            <li><a href="">전자 민원</a></li>
-                            <li><a href="">정보공개</a></li>
-                            <li><a href="">소식지</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">박물관소개</a>
-                        <ul>
-                            <li><a href="">인사말</a></li>
-                            <li><a href="">비전과 전략</a></li>
-                            <li><a href="">발자취</a></li>
-                            <li><a href="">조직 및 업무</a></li>
-                            <li><a href="">시설 소개</a></li>
-                            <li><a href="">수장고</a></li>
-                            <li><a href="">박물관 관련 자료</a></li>
-                            <li><a href="">문화유산 표준관리시스템</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="footer_1">
-                    <li><a href="">문화유산표준관리시스템</a></li>
-                    <li><a href="">청년멘토</a></li>
-                    <li><a href="">VCM 가상명품박물관 </a></li>
-                </ul>
-                <ul class="footer_2">
-                    <li>
-                        <a href="">관련사이트 바로가기</a>
-                        <ul>
-                            <li><a href="">국립박물관 문화재단</a></li>
-                            <li><a href="">국립중앙박물관회</a></li>
-                            <li><a href="">사단법인 한국박물관협회</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">소속박물관 바로가기</a>
-                        <ul class="">
-                            <li><a href="">국립경주박물관</a></li>
-                            <li><a href="">국립광주박물관</a></li>
-                            <li><a href="">국립전주박물관</a></li>
-                            <li><a href="">국립대구박물관</a></li>
-                            <li><a href="">국립부여박물관</a></li>
-                            <li><a href="">국립공주박물관</a></li>
-                            <li><a href="">국립진주박물관</a></li>
-                            <li><a href="">국립청주박물관</a></li>
-                            <li><a href="">국립김해박물관</a></li>
-                            <li><a href="">국립제주박물관</a></li>
-                            <li><a href="">국립춘천박물관</a></li>
-                            <li><a href="">국립나주박물관</a></li>
-                            <li><a href="">국립익산박물관</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">가이드북 다운로드</a>
-                        <ul class="">
-                            <li><a href="">한국어(PDF)</a></li>
-                            <li><a href="">English(PDF)</a></li>
-                            <li><a href="">日本語(PDF)</a></li>
-                            <li><a href="">中文(PDF)</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="footer_3">
-                    <li><a href="">개인정보처리방침</a></li>
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="">전자민원</a></li>
-                    <li><a href="">공공데이터개방</a></li>
-                    <li><a href="">저작권정책</a></li>
-                    <li><a href="">클린신고센터</a></li>
-                    <li><a href="">찾아오시는길</a></li>
-                </ul>
-                <div class="footer_4">
-                    <address>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
-                            대표전화 02-2077-9000
-                    </address>
-                    <p>© National Museum of Korea.</p>
-                    <a href="">웹접근성 품질 인증마크</a>
-                    <a href="">공공누리</a>
-                </div>
-            </div>
-        </footer>
     </main>
+    <!-- footer -->
+    <footer>
+        <div class="wrap">
+            <ul class="fnb">
+                <li>
+                    <a href="">관람정보</a>
+                    <ul class="">
+                        <li><a href="">관람 안내</a></li>
+                        <li><a href="">전시 해설</a></li>
+                        <li><a href="">예약하기</a></li>
+                        <li><a href="">관람·편의시설</a></li>
+                        <li><a href="">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">전시</a>
+                    <ul class="">
+                        <li><a href="#">상설 전시</a></li>
+                        <li><a href="#">특별 전시</a></li>
+                        <li><a href="#">디지털 실감 영상관</a></li>
+                        <li><a href="#">온라인 전시관</a></li>
+                        <li><a href="#">우리문화재 국외 전시</a></li>
+                        <li><a href="#">소속 국립박물관 전시</a></li>
+                        <li><a href="#">전시도록</a></li>
+                        <li><a href="#">외국박물관 소장 한국문화재</a></li>
+                        <li><a href="#">문화 행사</a></li>
+                    </ul>
+                </li>
+                <li><a href="">교육</a></li>
+                <li>
+                    <a href="">소장품</a>
+                    <ul class="">
+                        <li><a href="">큐레이터 추천 소장품</a></li>
+                        <li><a href="">소장품 검색</a></li>
+                        <li><a href="">국보·보물 검색</a></li>
+                        <li><a href="">수어 동영상</a></li>
+                        <li><a href="">소장품 열람·복제</a></li>
+                        <li><a href="">소장품 대여 안내</a></li>
+                        <li><a href="">문화재 기증 안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">학술·출판</a>
+                    <ul>
+                        <li><a href="">정기간행물</a></li>
+                        <li><a href="">고고학</a></li>
+                        <li><a href="">역사학</a></li>
+                        <li><a href="">미술사학</a></li>
+                        <li><a href="">아시아학</a></li>
+                        <li><a href="">보존과학</a></li>
+                        <li><a href="">일제 강점기 조사 자료</a></li>
+                        <li><a href="">도서관</a></li>
+                        <li><a href="">기타</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">소식·참여</a>
+                    <ul>
+                        <li><a href="">소식</a></li>
+                        <li><a href="">영상</a></li>
+                        <li><a href="">자원봉사 안내</a></li>
+                        <li><a href="">학예사 자격증 안내</a></li>
+                        <li><a href="">전자 민원</a></li>
+                        <li><a href="">정보공개</a></li>
+                        <li><a href="">소식지</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">박물관소개</a>
+                    <ul>
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">비전과 전략</a></li>
+                        <li><a href="">발자취</a></li>
+                        <li><a href="">조직 및 업무</a></li>
+                        <li><a href="">시설 소개</a></li>
+                        <li><a href="">수장고</a></li>
+                        <li><a href="">박물관 관련 자료</a></li>
+                        <li><a href="">문화유산 표준관리시스템</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footer_1">
+                <li><a href="">문화유산표준관리시스템</a></li>
+                <li><a href="">청년멘토</a></li>
+                <li><a href="">VCM 가상명품박물관 </a></li>
+            </ul>
+            <ul class="footer_2">
+                <li>
+                    <a href="">관련사이트 바로가기</a>
+                    <ul>
+                        <li><a href="">국립박물관 문화재단</a></li>
+                        <li><a href="">국립중앙박물관회</a></li>
+                        <li><a href="">사단법인 한국박물관협회</a></li>
+                    </ul>
+                </li>
+                <li><a href="">소속박물관 바로가기</a>
+                    <ul class="">
+                        <li><a href="">국립경주박물관</a></li>
+                        <li><a href="">국립광주박물관</a></li>
+                        <li><a href="">국립전주박물관</a></li>
+                        <li><a href="">국립대구박물관</a></li>
+                        <li><a href="">국립부여박물관</a></li>
+                        <li><a href="">국립공주박물관</a></li>
+                        <li><a href="">국립진주박물관</a></li>
+                        <li><a href="">국립청주박물관</a></li>
+                        <li><a href="">국립김해박물관</a></li>
+                        <li><a href="">국립제주박물관</a></li>
+                        <li><a href="">국립춘천박물관</a></li>
+                        <li><a href="">국립나주박물관</a></li>
+                        <li><a href="">국립익산박물관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">가이드북 다운로드</a>
+                    <ul class="">
+                        <li><a href="">한국어(PDF)</a></li>
+                        <li><a href="">English(PDF)</a></li>
+                        <li><a href="">日本語(PDF)</a></li>
+                        <li><a href="">中文(PDF)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footer_3">
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">전자민원</a></li>
+                <li><a href="">공공데이터개방</a></li>
+                <li><a href="">저작권정책</a></li>
+                <li><a href="">클린신고센터</a></li>
+                <li><a href="">찾아오시는길</a></li>
+            </ul>
+            <div class="footer_4">
+                <address>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
+                        대표전화 02-2077-9000
+                </address>
+                <p>© National Museum of Korea.</p>
+                <a href="">웹접근성 품질 인증마크</a>
+                <a href="">공공누리</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
