@@ -119,15 +119,21 @@
             $("#notice .wrap .board ul li").not(this).css({"border-bottom":"none","font-weight":"initial"});
             return false;
         });
-
-        //event 페이지 순서 넘버링
-        $("#notice .event h3").append("<div class='conunt'><span class='left_number'></span><span>/</span><span class='right_number'></span></div>");
+    });
+</script>
+<!-- event 페이지 순서 넘버링 -->
+<script>
+    $(function(){
+        $("#notice .event h3").append("<div class='conunt'><span class='active_number'></span><span>/</span><span class='length_number'></span></div>");
         var number = $(".slick-dots .slick-active").index()+1;
-        $(".left_number").text(number);
-        $(".right_number").text(+$(".event_slide .slick-dots li").length);
-
-        
-
+        $(".active_number").text(number);
+        $("#notice .event button.slick-arrow").click(function(){
+            if($(".event .slick-dots").has(".slick-active")){
+                var active_number = $(".event .slick-dots .slick-active").index()+1;
+                $(".active_number").text(active_number);
+            }
+        });
+        $(".length_number").text(+$(".event_slide .slick-dots li").length);
     });
 </script>
 <body>
