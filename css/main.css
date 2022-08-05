@@ -1,13 +1,3 @@
-@media hover{
-  #exhibits .wrap ul li a:hover{
-    background-color: #000;
-  }
-  #notice .wrap .board ul li > ul li a:hover{
-    text-decoration-line: underline;  
-  }
-}
-main{
-}
 /* exhibits */
 #exhibits {
 
@@ -184,7 +174,7 @@ main{
   height: 30px;
 }
 #notice .event button.slick-arrow.slick-prev{
-    left: 150px;
+    left: 156px;
    top: -50px;
     border-radius: 0 10px 10px 0;
 }
@@ -204,7 +194,7 @@ main{
     border-left:transparent;    
 } 
 #notice .event .slick-prev::before{
-    transform:translateX(10px) rotate(-135deg);
+    transform: rotate(-135deg);
 }
 #notice .event .slick-next::before{
     transform: rotate(45deg);
